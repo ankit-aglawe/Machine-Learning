@@ -13,6 +13,9 @@ y = data.iloc[:,-1].values
 Z = data.iloc[:,:-1].columns.tolist()  #for numpy array
 Z = list(X.head(0))      #for pandas datafram
 
+#Get summary of NaN in Data
+print(data.isnull().sum())
+
 
 # Get Index 
 k = data.iloc[:,:-1].index 
@@ -57,6 +60,8 @@ X[:, 1:3] = imputer.transform(X[:, 1:3])
 
 
 # Taking care of missing data with fillna
+
+
 
 
 # Comparing and plotting Classifier Accuracy
