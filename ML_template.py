@@ -59,7 +59,8 @@ imputer = imputer.fit(X[:, 1:3])
 X[:, 1:3] = imputer.transform(X[:, 1:3])
 
 
-# Taking care of missing data with fillna
+# Taking care of missing data with fillna, data=df & 'Age' - column name
+data['Age'].fillna(round(data['Age'].mean()),inplace=True)
 
 
 
